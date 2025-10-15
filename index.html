@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alata Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        height: 100vh;
+        background: linear-gradient(to bottom, rgb(251, 246, 253) 30%, rgb(252, 252, 252));
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    input {
+        border: 1px solid rgb(40, 1, 54);
+        font-weight: bold;
+        font-size: 20px;
+        background-color: transparent;
+        box-shadow: 0px 0px 7px 0px rgb(135, 126, 138);
+    }
+
+    input:focus {
+        border: none !important;
+    }
+
+    button {
+        width: 50px;
+        background: linear-gradient(30deg, rgb(37, 19, 44) 10%, rgb(132, 98, 145));
+        color: white;
+        box-shadow: 0px 0px 7px 1px rgb(42, 32, 46);
+    }
+
+    button:hover {
+        transform: translatex(10px);
+        transform: scale(1.3);
+        background: linear-gradient(30deg, rgb(84, 43, 100) 10%, rgb(132, 98, 145));
+
+    }
+
+    #showResult {
+        background-color: rgb(86, 84, 87);
+    }
+
+    .answerContainer {
+        font-size: 17px;
+    }
+</style>
+
+<body>
+    <div class="container d-flex align-items-center justify-content-center flex-column w-100 gap-4">
+        <input autofocus id="firstNumber" type="number" value="4" placeholder="Enter first number"
+            class="px-3 py-2 rounded-4 text-center">
+        <div class="d-flex gap-4">
+            <button class="border-0 rounded-4 px-3 py-1 fw-bold fs-5" type="submit" onclick="multiply()">x</button>
+            <button class="border-0 rounded-4 px-3 py-1 fw-bold fs-5" type="submit" onclick="add()">+</button>
+            <button class="border-0 rounded-4 px-3 py-1 fw-bold fs-5" type="submit" onclick="substract()">-</button>
+            <button class="border-0 rounded-4 px-3 py-1 fw-bold fs-5" type="submit" onclick="divide()">/</button>
+        </div>
+        <input id="secondNumber" type="number" value="1" placeholder="Second number"
+            class="px-3 py-2 rounded-4 text-center">
+
+        <div class="answerContainer">Answer =
+            <span id="showResult" class="py-2 px-4 text-white fw-bold rounded-4 ms-3"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
